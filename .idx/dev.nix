@@ -6,17 +6,17 @@
 
   # Use https://search.nixos.org/packages to find packages
   packages = [
-    pkgs.autoconf
-    pkgs.automake
-    pkgs.gcc
-    pkgs.gnumake
-    pkgs.byacc
-    pkgs.flex
-    pkgs.xa
-    pkgs.gawk
-    pkgs.dos2unix
-    pkgs.perl
-    pkgs.pkg-config
+    # pkgs.autoconf
+    # pkgs.automake
+    # pkgs.gcc
+    # pkgs.gnumake
+    # pkgs.byacc
+    # pkgs.flex
+    # pkgs.xa
+    # pkgs.gawk
+    # pkgs.dos2unix
+    # pkgs.perl
+    # pkgs.pkg-config
   ];
 
   # Sets environment variables in the workspace
