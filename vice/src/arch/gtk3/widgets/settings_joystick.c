@@ -151,11 +151,29 @@ static void on_swap_joysticks_toggled(GtkWidget *button, gpointer data)
     joystick_device_widget_update(device_widgets[JOYPORT_2], joy2);
 }
 
-/** \brief  Handler for the 'clicked' event of the "Configure keysets" button
- *
- * \param[in]   widget  button (unused)
- * \param[in]   data    keyset number (`int`)
- */
+
+// Forward declaration of the new handler function
+static void on_rescan_joysticks_button_clicked(GtkWidget *button, gpointer data);
+static void update_joystick_widgets();
+
+// Handler for the "Rescan Joysticks" button click
+static void on_rescan_joysticks_button_clicked(GtkWidget *button, gpointer data) {
+    fprintf(stderr, "Rescan Joysticks button clicked\n");
+    // joystick_rescan_devices();
+    update_joystick_widgets(); // Add call to update_joystick_widgets
+}
+
+//This is a new method used to update the UI widgets.
+static void update_joystick_widgets(){
+    fprintf(stderr, "update_joystick_widgets called\n");
+    //this is pseudo code to show what actions must be done. 
+    //for each joystick port {
+    //  get current device id;
+    //  get the widget for the current device port;
+    //  joystick_device_widget_update(current_widget, new device_id);
+    //}
+}
+
 static void on_keyset_configure_button_clicked(GtkWidget *widget, gpointer data)
 {
     keyset_dialog_show(GPOINTER_TO_INT(data));
